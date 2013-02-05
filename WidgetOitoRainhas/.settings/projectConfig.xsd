@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://samsung.widgetsdk.uievolution.com"
+	version="2"
+	elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://samsung.widgetsdk.uievolution.com">
+
+	<xs:element name="widget" type="mytype"></xs:element>
+
+	<xs:complexType name="authType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="email" type="xs:string" use="optional" />
+				<xs:attribute name="href" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="mytype">
+        <xs:sequence>
+			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" >
+				<xs:annotation>
+					<xs:documentation>A Description of the widget</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="version" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+The version number has the following format:
+
+major.minor
+
+The major and minor numbers are required.
+
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="collapse"></xs:whiteSpace>
+						<xs:pattern value="\d+\.\d+"></xs:pattern>
+						<xs:maxLength value="10"></xs:maxLength>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="width" type="xs:int" minOccurs="1" maxOccurs="1" />
+			<xs:element name="height" type="xs:int" minOccurs="1" maxOccurs="1" />
+			<xs:element name="icon" type="xs:string" />
+			<xs:element name="main" type="xs:string" />
+			<xs:element name="network" type="xs:boolean" />
+			<xs:element name="dockable" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="modes" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>This is deprecated</xs:documentation>
+				</xs:annotation></xs:element>
+			<xs:element name="defaultMode" type="xs:string" >
+				<xs:annotation>
+					<xs:documentation>This is deprecated.</xs:documentation>
+				</xs:annotation></xs:element>
+
+			<xs:element name="author" type="authType" maxOccurs="1" minOccurs="0">
+                <xs:annotation>
+                	<xs:documentation>The author of the widget</xs:documentation>
+                </xs:annotation>
+			</xs:element>
+			<xs:element name="license" type="xs:string" maxOccurs="1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Use this tag to specify any licensing text.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="feature" type="featureType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required" />
+	</xs:complexType>
+
+
+
+
+
+	<xs:complexType name="featureType">
+        <xs:sequence>
+        	<xs:element name="param" type="paramType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:anyURI"></xs:attribute>
+		<xs:attribute name="required" type="xs:boolean"></xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="paramType">
+		<xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+		<xs:attribute name="value" type="xs:string" use="required"></xs:attribute>
+	</xs:complexType>
+
+</xs:schema>

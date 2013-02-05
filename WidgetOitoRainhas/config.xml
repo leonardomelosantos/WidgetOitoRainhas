@@ -1,0 +1,17 @@
+<widget>
+  <widgetname>8 Rainhas</widgetname>
+  <description>Jogo das "8 Rainhas" desenvolvimento por Leonardo Melo Santos.</description>
+  <width>320</width>
+  <height>460</height>
+  <author>
+    <name>Leonardo Melo Santos</name>
+    <email>leonardomelosantos@gmail.com</email>
+    <link></link>
+    <organization>Leonardo Melo Santos</organization>
+  </author>
+  <id>
+    <host>cesar.edu.org</host>
+    <name>8rainhas_leonardomelosantos</name> 
+    <revised>2011-03</revised>
+  </id>
+</widget>

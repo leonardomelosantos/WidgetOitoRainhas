@@ -1,0 +1,138 @@
+* { 
+	margin:0 ; 
+	padding: 0;	
+}
+
+#screenMenu {
+	margin:0 ; 
+	padding: 0;
+	width: 320px;
+	height: 460px;
+	display: none;
+	background: #CBFFC2;
+}
+
+#screenBoard {
+	margin:0 ; 
+	padding: 0;
+	width: 320px;
+	height: 460px;
+	display: none;
+}
+
+#board {
+	width: 320px;
+	height: 320px;
+	background-image: url("../images/board.png");
+}
+
+#buttonStartGame {
+	width: 200px;
+	margin-top: 20px
+}
+	
+#buttonStartGameAgain {
+	width: 200px;
+	margin-top: 20px
+}
+
+#buttonMenu {
+	width: 104px;
+	float: left;
+}
+
+#buttonSaveGame {
+	width: 105px;
+	float: left;
+}
+
+#buttonRestart {
+	width: 105px;
+	float: left;
+}
+
+.button {
+	background-color: #235800;
+	margin: 0; 
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Tahoma;
+	border-radius: 8px;
+	border: 1px solid orange;
+}
+
+.buttonDisabled {
+	background-color: #235800;
+	margin: 0; 
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: gray;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Tahoma;
+	border-radius: 8px;
+	border: 1px solid orange;
+}
+
+.cell {
+	width: 40px;
+	height: 40px;
+	float: left;	
+}
+
+.cellQueen {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-image: url("../images/coroa.png");
+}
+
+.cellDisable {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-image: url("../images/disable.png");
+}
+
+.logo {
+	width: 320px;
+	height: 80px;
+	background-image: url("../images/logo.png");
+}
+
+#time {
+	width: 314px;
+	height: 14px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 4px;
+	background-color: #235800;
+	color: white;
+	text-align: right;
+	font-size: 12px;
+	font-family: Tahoma;
+	border-radius: 8px;
+	border: 1px orange solid;
+}
+
+#congratulations {
+	position: absolute;
+	top: 206px;
+	left: 17px;
+	width: 285px;
+	height: 111px;
+	display: none;
+	background-color: #235800;
+	border-radius: 8px;
+	border: 1px orange solid;
+	color: orange;
+	text-align: center;
+	font-size: 20px;
+	font-family: Tahoma;
+	font-weight: bold;
+}
